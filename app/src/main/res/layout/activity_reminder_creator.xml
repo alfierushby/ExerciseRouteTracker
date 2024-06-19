@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="ReminderCreatorViewModel"
+            type="com.example.cw2.viewmodels.ReminderCreatorViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".views.ReminderCreator">
+
+        <LinearLayout
+            android:id="@+id/linearLayout4"
+            android:background="@{ReminderCreatorViewModel.backgroundColourDrawable}"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Name" />
+
+            <EditText
+                android:id="@+id/reminderNameEdit"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:autofillHints="@string/A_Reminder"
+                android:ems="10"
+                android:hint="@string/A_Reminder"
+                android:text="@={ReminderCreatorViewModel.reminderName}"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Radius" />
+
+            <EditText
+                android:id="@+id/reminderRadiusEdit"
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:autofillHints="@string/Cycling"
+                android:ems="10"
+                android:hint="@string/Default_Radius"
+                android:inputType="number"
+                android:text="@={ReminderCreatorViewModel.reminderRadius}" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/reminderPlace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="finish"
+                android:text="@string/PlaceLocate" />
+
+            <Button
+                android:id="@+id/reminderPlaceCancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="cancel"
+                android:text="@string/Cancel" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

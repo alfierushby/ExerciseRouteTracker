@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="MovementCreatorViewModel"
+            type="com.example.cw2.viewmodels.MovementCreatorViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".views.MovementCreator">
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:background="@{MovementCreatorViewModel.backgroundColourDrawable}"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Type" />
+
+            <Button
+                android:id="@+id/movementWalking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{()->MovementCreatorViewModel.setType(0)}"
+                android:text="@string/Walking" />
+
+            <Button
+                android:id="@+id/movementRunning"
+                android:layout_width="match_parent"
+                android:onClick="@{()->MovementCreatorViewModel.setType(1)}"
+                android:layout_height="wrap_content"
+                android:text="@string/Running" />
+
+            <Button
+                android:id="@+id/movementCycling"
+                android:layout_width="match_parent"
+                android:onClick="@{()->MovementCreatorViewModel.setType(2)}"
+                android:layout_height="wrap_content"
+                android:text="@string/Cycling" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{@string/Selected_Type(MovementCreatorViewModel.movementType + 1)}" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Name" />
+
+            <EditText
+                android:id="@+id/movementName"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:autofillHints="@string/Today_Run"
+                android:text="@={MovementCreatorViewModel.movementName}"
+                android:ems="10"
+                android:hint="@string/Today_Run"
+                android:inputType="text" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentContainerView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/startRecording"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="startRecording"
+                android:text="@string/Start_Recording" />
+
+            <Button
+                android:id="@+id/stopRecording"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="stopRecording"
+                android:text="@string/Stop_Recording" />
+
+            <Button
+                android:id="@+id/finishMovement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="finish"
+                android:text="@string/Save" />
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

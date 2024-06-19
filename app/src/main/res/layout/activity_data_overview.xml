@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="DataOverviewViewModel"
+            type="com.example.cw2.viewmodels.DataOverviewViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".views.DataOverview">
+
+        <LinearLayout
+            android:background="@{DataOverviewViewModel.backgroundColourDrawable}"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{@string/Reminders(DataOverviewViewModel.numberReminders)}"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/numberOfMovementToday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{@string/RoutesToday(DataOverviewViewModel.numberRoutesToday)}"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/numberOfRemindersToday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{@string/RemindersToday(DataOverviewViewModel.numberRemindersToday)}"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="finish"
+                android:text="@string/Finish" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

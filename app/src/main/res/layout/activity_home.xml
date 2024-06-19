@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="HomeViewModel"
+            type="com.example.cw2.viewmodels.HomeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".views.Home">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="1dp"
+            android:background="@{HomeViewModel.backgroundColourDrawable}"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/RemindersHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onRemindersClick"
+                android:text="@string/home1" />
+
+            <Button
+                android:id="@+id/MovementsHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onMovementsClick"
+                android:text="@string/Movements" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onObservationsClick"
+                android:text="@string/Observations" />
+
+            <Button
+                android:id="@+id/SettingsHome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onSettingsClick"
+                android:text="@string/Settings" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/Watch_Geofences"
+                android:onClick="watchService"
+                android:text="@{HomeViewModel.resource}" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
