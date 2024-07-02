@@ -13,7 +13,7 @@
   - "How many location-based reminders have I received today?"
 - **Data Annotation**: Enable users to tag exercises with notes.
 
-### Prerequisites
+## Prerequisites
 
 - Android Studio
 - An Android device or emulator running Android API 32 or higher.
