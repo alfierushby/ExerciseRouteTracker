@@ -12,7 +12,7 @@ The Quantified Self or life-logging movement has been significantly enhanced by 
   - "How far have I moved so far today?"
   - "How many location-based reminders have I received today?"
 - **Data Annotation**: Enable users to tag exercises with notes.
-- 
+
 ### Prerequisites
 
 - Android Studio
