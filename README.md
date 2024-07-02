@@ -2,7 +2,8 @@
 
 ## Introduction
 
- This application is designed to provide users with a powerful tool for tracking their physical activities and setting location-based reminders.
+ This application is designed to provide users with a powerful tool for tracking their physical activities and setting location-based reminders. 
+ This app was designed to follow the android app architecture best practices, and also Hilt for easy dependency injection.
 
 ## Features
 
