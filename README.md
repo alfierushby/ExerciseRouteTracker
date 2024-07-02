@@ -1,8 +1,8 @@
-# Quantified Self Mobile Application
+# Geo Tracker 
 
 ## Introduction
 
-The Quantified Self or life-logging movement has been significantly enhanced by advances in mobile and wearable computing. This application is designed to leverage these advancements to provide users with a powerful tool for tracking their physical activities and setting location-based reminders.
+ This application is designed to provide users with a powerful tool for tracking their physical activities and setting location-based reminders.
 
 ## Features
 
